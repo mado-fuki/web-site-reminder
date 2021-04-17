@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'ridgepole'
+gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +48,9 @@ group :development do
   gem 'spring'
   gem 'rubocop', require:false
   gem 'rubocop-rails', require:false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rspec'
+
 end
 
 group :test do

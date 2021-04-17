@@ -1,0 +1,17 @@
+# encoding: utf-8
+
+create_table "users", force: :cascade do |t|
+  t.string   "name", comment: "ユーザー名"
+  t.string   "email", comment: "メールアドレス"
+  t.string   "password_digest", comment: "パスワード"
+  t.datetime "created_at"
+  t.datetime "updated_at"
+end
+
+create_table "articles", force: :cascade do |t|
+  t.string   "title", comment: "タイトル"
+  t.text     "url", comment: "WebサイトのURL"
+  t.date     "next_study_date", comment: "次回学習日"
+  t.datetime "created_at"
+  t.datetime "updated_at"
+end
