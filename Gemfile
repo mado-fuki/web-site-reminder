@@ -5,6 +5,7 @@ ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.5'
 # Use Puma as the app server
@@ -48,8 +49,6 @@ group :development do
   gem 'spring'
   gem 'rubocop', require:false
   gem 'rubocop-rails', require:false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rspec'
 
 end
 
