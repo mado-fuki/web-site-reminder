@@ -12,8 +12,10 @@ services:
 
   web:
     build: .  # ビルドするローカルのDockerファイルの場所を指定する
-     # docker-composeコマンドの引数にコマンドが渡されなかった場合に実行される
+    # docker-composeコマンドの引数にコマンドが渡されなかった場合に実行される
     command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    stdin_open: true
+    tty: true
     volumes:
       # カレントフォルダ(docker-compose.ymlが置いてあるフォルダ)をコンテナの/app_nameにマウントしている
       - .:/web-site-reminder
